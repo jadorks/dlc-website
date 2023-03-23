@@ -8,7 +8,11 @@ export default function About() {
           <img src="/images/about.png" alt="" />
         </div>
         <div className={styles.content__right}>
-            <img className={styles.about_ellipse} src="/images/elements/about-ellipse.svg" alt="" />
+          <img
+            className={styles.about_ellipse}
+            src="/images/elements/about-ellipse.svg"
+            alt=""
+          />
           <h2>What is Deep Learning Chain?</h2>
           <p>
             Deep Learning Chain (DLC) is a Layer 2 blockchain platform that is
@@ -17,13 +21,22 @@ export default function About() {
             it is permissionless, meaning anyone can create a new account or
             transaction on the network.
           </p>
-          <a href="/" className="flex gap-4 items-center justify-center md:justify-start">
+          <a
+            href="https://app.uniswap.org/#/swap?outputCurrency=0x056d97a9a9dda5a32492ac31467a3823f26f29f0"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex gap-4 items-center justify-center md:justify-start"
+          >
             <p>Buy Token</p>
             <img src="/images/elements/btn.svg" alt="" />
           </a>
         </div>
       </div>
-      <img className={styles.about_end} src="/images/elements/about-end.png" alt="" />
+      <img
+        className={styles.about_end}
+        src="/images/elements/about-end.png"
+        alt=""
+      />
     </div>
   );
 }
