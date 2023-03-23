@@ -1,0 +1,13 @@
+.accordion__item {
+    @apply px-1 py-4 border-b-2;
+}
+
+.accordion__title {
+    @apply flex justify-between cursor-pointer;
+    @apply font-alien_encounters_solid;
+}
+
+.accordion__content {
+    @apply font-poppins text-center pt-2 text-[17px];
+    @apply text-[#A09FAF];
+}
