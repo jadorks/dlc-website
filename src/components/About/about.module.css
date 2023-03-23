@@ -16,7 +16,7 @@
 
 .content__right p {
     @apply xl:ml-20;
-    @apply font-poppins text-[16px] text-[#CCCCCC] text-justify;
+    @apply font-poppins text-[16px] text-[#CCCCCC] text-center md:text-justify;
 }
 
 .about_end {
