@@ -1,0 +1,94 @@
+.container {
+  @apply py-32;
+  background: linear-gradient(
+    1.24deg,
+    #080d14 10.57%,
+    rgba(11, 13, 33, 0) 34.14%
+  );
+}
+
+.content__head {
+  @apply text-center mb-10;
+}
+
+.content__head h3 {
+  @apply font-poppins text-[18px] text-[#C004DE] font-bold uppercase;
+}
+
+.content__head h2 {
+  @apply mt-4;
+  @apply font-alien_encounters_solid text-[36px];
+}
+
+.roadmap__wrapper {
+  position: relative;
+  margin: 0 auto;
+  /* height: 500px; */
+}
+
+.roadmap__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  /* margin-left: -3px; */
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+}
+
+.roadmap__item_container {
+  @apply flex gap-32 justify-center pt-20;
+}
+
+.roadmap__item {
+  @apply relative p-4 w-[300px];
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2) -1.52%,
+    rgba(255, 255, 255, 0.2) 104.35%
+  );
+  backdrop-filter: blur(60px);
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    145.77deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.3) 105.76%
+  );
+}
+
+.roadmap__item h4 {
+  @apply font-alien_encounters_solid text-[24px];
+}
+
+.roadmap__item p {
+  @apply font-poppins text-[17px] text-[#A09FAF];
+}
+
+.roadmap__item::before{
+    content: "";
+    position: absolute;
+    border: 2px white dashed;
+    width: 70px;
+    top:-40px;
+    left: 36%;
+    transform: rotate(90deg);
+}
+
+.roadmap__item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 44%;
+    background-color: #C004DE;
+    border: 5px solid rgba(192, 4, 222, 0.2);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    top: -93px;
+    border-radius: 50%;
+    z-index: 1;
+}

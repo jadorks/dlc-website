@@ -3,7 +3,7 @@
 }
 
 .content h2 {
-  @apply mb-8;
+  @apply mb-12;
   @apply text-center font-alien_encounters_solid text-[50px] font-bold;
 }
 

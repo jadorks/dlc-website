@@ -1,0 +1,9 @@
+.container {
+    @apply px-32 py-8 bg-[#0B0C1B];
+    @apply border-t-[1.5px] border-[#FFFFFF3D];
+}
+
+.content {
+    @apply flex items-center justify-between;
+    @apply font-alien_encounters_solid text-[16px];
+}
