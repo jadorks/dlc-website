@@ -1,35 +1,35 @@
 .container{
-    @apply relative py-32;
+    @apply relative pb-32 px-8;
 }
 
 .content{
-    @apply flex justify-center items-center gap-32;
+    @apply flex flex-col md:flex-row justify-center items-center gap-16 xl:gap-32;
 }
 
 .content__right{
-    @apply relative flex flex-col gap-8 w-[30rem];
+    @apply relative flex flex-col gap-8 w-full md:w-[25rem];
 }
 
 .content__right h2 {
-    @apply font-alien_encounters_solid text-[40px];
+    @apply font-alien_encounters_solid text-[40px] text-center md:text-left;
 }
 
 .content__right p {
-    @apply ml-20;
-    @apply font-poppins text-[16px] text-[#CCCCCC];
+    @apply xl:ml-20;
+    @apply font-poppins text-[16px] text-[#CCCCCC] text-center md:text-left;
 }
 
 .governance__end_left {
-    @apply hidden lg:block absolute bottom-[3rem] left-0;
+    @apply hidden xl:block absolute bottom-[3rem] left-0;
 }
 
 .governance__end_right{
-    @apply hidden lg:block absolute bottom-[6rem] right-0;
+    @apply hidden xl:block absolute bottom-[6rem] right-0;
 
 }
 
 .about_ellipse{
-    @apply hidden lg:block absolute;
+    @apply hidden md:block absolute;
     bottom: 200px;
     left: 100px;
     border-radius: 200px;
