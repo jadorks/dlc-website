@@ -7,7 +7,7 @@
 }
 
 .content__right{
-    @apply relative flex flex-col gap-8 w-[25rem];
+    @apply relative flex flex-col gap-8 w-[30rem];
 }
 
 .content__right h2 {
@@ -16,11 +16,16 @@
 
 .content__right p {
     @apply ml-20;
-    @apply font-poppins text-[16px] text-[#CCCCCC] text-justify;
+    @apply font-poppins text-[16px] text-[#CCCCCC];
 }
 
-.about_end {
-    @apply hidden lg:block absolute bottom-0 left-0;
+.governance__end_left {
+    @apply hidden lg:block absolute bottom-[3rem] left-0;
+}
+
+.governance__end_right{
+    @apply hidden lg:block absolute bottom-[6rem] right-0;
+
 }
 
 .about_ellipse{

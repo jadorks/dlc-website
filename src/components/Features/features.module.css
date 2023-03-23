@@ -1,0 +1,28 @@
+.container {
+  @apply bg-[#F5F5F5] text-black py-32 px-16;
+}
+
+.content h2 {
+  @apply mb-8;
+  @apply text-center font-alien_encounters_solid text-[50px] font-bold;
+}
+
+.features {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.features__card {
+  @apply flex flex-col gap-2;
+}
+
+.features__card img {
+  @apply lg:min-h-[506px] object-cover;
+}
+
+.features__card h3 {
+  @apply font-alien_encounters_solid text-[18px];
+}
+
+.features__card p {
+  @apply font-poppins text-[16px];
+}
