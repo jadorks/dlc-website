@@ -9,7 +9,7 @@ export default function Layout({ children }) {
       <Head>
         <title>Deep Learning Chain</title>
 
-        {/* <link
+        <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/apple-touch-icon.png"
@@ -46,13 +46,10 @@ export default function Layout({ children }) {
           content="A Voice-Automated, Proof-of-Authority, Permissionless Blockchain."
           property="twitter:description"
         />
-        <meta
-          content="/banner.png"
-          property="twitter:image"
-        />
+        <meta content="/banner.png" property="twitter:image" />
         <meta property="og:type" content="website" />
         <meta content="summary_large_image" name="twitter:card" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" /> */}
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <Navbar />
       <main>{children}</main>
