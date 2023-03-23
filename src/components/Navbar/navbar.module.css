@@ -1,0 +1,15 @@
+.container{
+    @apply py-8 px-16;
+}
+
+.content {
+    @apply flex justify-between items-center;
+}
+
+.nav_menu {
+    @apply flex gap-8;
+}
+
+.nav_menu li {
+    @apply font-alien_encounters_solid text-[16px]
+}

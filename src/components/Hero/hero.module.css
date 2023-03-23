@@ -1,0 +1,25 @@
+.container {
+    @apply py-16;
+}
+
+.content{
+    @apply flex flex-col items-center gap-6;
+    @apply text-center uppercase;
+}
+
+.content h1 {
+    @apply font-alien_encounters text-[80px] font-bold;
+}
+
+.subtitle {
+    @apply relative font-alien_encounters_solid text-[30px] font-bold;
+}
+
+.hero_ellipse{
+    @apply hidden lg:block absolute ;
+    right: 550px;
+    bottom: -100px;
+    border-radius: 200px;
+    filter: blur(200px);
+    z-index: -1;
+}

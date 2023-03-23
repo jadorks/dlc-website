@@ -64,3 +64,9 @@
     font-display: swap;
   }
 }
+
+body {
+  margin: 0;
+  background-color: #12022c;
+  color: #FFFFFF;
+}
