@@ -1,0 +1,33 @@
+.container{
+    @apply relative py-32;
+}
+
+.content{
+    @apply flex justify-center items-center gap-20;
+}
+
+.content__right{
+    @apply relative flex flex-col gap-8 w-[25rem];
+}
+
+.content__right h2 {
+    @apply font-alien_encounters_solid text-[40px];
+}
+
+.content__right p {
+    @apply ml-20;
+    @apply font-poppins text-[16px] text-[#CCCCCC] text-justify;
+}
+
+.about_end {
+    @apply hidden lg:block absolute bottom-0 left-0;
+}
+
+.about_ellipse{
+    @apply hidden lg:block absolute;
+    bottom: 200px;
+    left: 100px;
+    border-radius: 200px;
+    filter: blur(200px);
+    z-index: -1;
+}
