@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Alien-Encounters-Solid";
+    src: url("../assets/fonts/Alien-Encouters/AlienEncountersSolid.woff2")
+        format("woff2"),
+      url("../assets/fonts/Alien-Encouters/AlienEncountersSolid.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Alien-Encounters-Solid";
+    src: url("../assets/fonts/Alien-Encouters/AlienEncountersSolidBold.woff2")
+        format("woff2"),
+      url("../assets/fonts/Alien-Encouters/AlienEncountersSolidBold.woff")
+        format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Alien-Encounters";
+    src: url("../assets/fonts/Alien-Encouters/AlienEncountersBold.woff2")
+        format("woff2"),
+      url("../assets/fonts/Alien-Encouters/AlienEncountersBold.woff")
+        format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Alien-Encounters";
+    src: url("../assets/fonts/Alien-Encouters/AlienEncounters.woff2")
+        format("woff2"),
+      url("../assets/fonts/Alien-Encouters/AlienEncounters.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins/Poppins-Bold.woff2") format("woff2"),
+      url("../assets/fonts/Poppins/Poppins-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins/Poppins-Regular.woff2") format("woff2"),
+      url("../assets/fonts/Poppins/Poppins-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
