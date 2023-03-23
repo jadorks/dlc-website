@@ -1,12 +1,18 @@
 import Link from "next/link";
 import styles from "./footer.module.css";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-8">
-          <Link href={"/"}>Whitepaper</Link>
+          {router.pathname === "/" ? (
+            <Link href={"/whitepaper"}>Whitepaper</Link>
+          ) : (
+            <Link href={"/"}>Home</Link>
+          )}
           <a
             href="https://www.dextools.io/app/en/ether/pair-explorer/0x64b89fc798ed63e1df644505560956722cd610cb"
             target="_blank"

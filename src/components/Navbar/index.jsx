@@ -2,8 +2,10 @@ import Link from "next/link";
 import styles from "./navbar.module.css";
 import { Popover } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/20/solid";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -14,9 +16,16 @@ export default function Navbar() {
         </div>
         <div className={styles.content__right}>
           <ul className={styles.nav_menu}>
-            <li>
-              <Link href={"/whitepaper"}>Whitepaper</Link>
-            </li>
+            {router.pathname === "/" ? (
+              <li>
+                <Link href={"/whitepaper"}>Whitepaper</Link>
+              </li>
+            ) : (
+              <li>
+                <Link href={"/"}>Home</Link>
+              </li>
+            )}
+
             <li>
               <a
                 href="https://www.dextools.io/app/en/ether/pair-explorer/0x64b89fc798ed63e1df644505560956722cd610cb"
