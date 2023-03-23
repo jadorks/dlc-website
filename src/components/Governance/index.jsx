@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./governance.module.css";
 
 export default function Governance() {
@@ -18,10 +19,10 @@ export default function Governance() {
           <p className="break-words font-bold">
             CA:0×056D97A9A9dDA5A32492Ac31467A3823F26F29F0
           </p>
-          <a href="/" className="flex gap-4 items-center justify-center md:justify-start">
+          <Link href="/whitepaper#governance" className="flex gap-4 items-center justify-center md:justify-start">
             <p>Learn More</p>
             <img src="/images/elements/btn.svg" alt="" />
-          </a>
+          </Link>
         </div>
         <div className={styles.content__left}>
           <img src="/images/governance.png" alt="" />

@@ -95,7 +95,7 @@ export default function Whitepaper() {
           </div>
         </div>
         <div className="pb-32 px-8">
-          <div>
+          <div id="governance">
             <h2 className="font-alien_encounters_solid text-[36px] text-center pb-2">
               What is $DLC?
             </h2>
@@ -121,7 +121,7 @@ export default function Whitepaper() {
           </div>
         </div>
         <div className="pb-32 px-8">
-          <div>
+          <div id="features">
             <h2 className="font-alien_encounters_solid text-[36px] text-center pb-2">
               Features
             </h2>

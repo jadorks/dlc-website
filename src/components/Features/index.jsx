@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./features.module.css";
 
 export default function Features() {
@@ -44,10 +45,10 @@ export default function Features() {
             </div>
           ))}
         </div>
-        <a href="/" className="mt-10 flex justify-center gap-4 items-center">
+        <Link href="/whitepaper#features" className="mt-10 flex justify-center gap-4 items-center">
             <p className="font-poppins text-16">Endless possibilities</p>
             <img src="/images/elements/btn-alt.svg" alt="" />
-          </a>
+          </Link>
       </div>
     </div>
   );
