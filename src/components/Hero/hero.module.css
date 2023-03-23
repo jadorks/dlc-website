@@ -1,5 +1,5 @@
 .container {
-    @apply py-16;
+    @apply py-16 px-4;
 }
 
 .content{
@@ -8,11 +8,11 @@
 }
 
 .content h1 {
-    @apply font-alien_encounters text-[80px] font-bold;
+    @apply font-alien_encounters text-[50px] md:text-[80px] font-bold;
 }
 
 .subtitle {
-    @apply relative font-alien_encounters_solid text-[30px] font-bold;
+    @apply relative font-alien_encounters_solid text-[25px] md:text-[30px] font-bold;
 }
 
 .hero_ellipse{
