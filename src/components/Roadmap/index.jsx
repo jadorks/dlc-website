@@ -38,6 +38,36 @@ export default function Roadmap() {
             </div>
           </div>
         </div>
+        <div className={styles.mobile__roadmap}>
+          <div className={styles.roadmap__item_container}>
+            <div className={styles.roadmap__item_mobile}>
+              <h4>Phase 1</h4>
+              <div>
+                <p>$DLC Launch on Uniswap</p>
+                <p>2000 Telegram Members</p>
+                <p>CoinGecko/ CMC Listings</p>
+              </div>
+            </div>
+            <div className={styles.roadmap__item_mobile}>
+              <h4>Phase 2</h4>
+              <div>
+                <p>Release Deep Learning Chain Testnet</p>
+                <p>ContractChecker Blockchain Audit</p>
+                <p>$DLC Github Made Public</p>
+                <p>Blockchain Explorer</p>
+              </div>
+            </div>
+            <div className={styles.roadmap__item_mobile}>
+              <h4>Phase 3</h4>
+              <div>
+                <p>Deep Learning Chain Mainnet Live</p>
+                <p>DC Airdrop for DLC Holders</p>
+                <p>Native DLC Dex Trading goes live</p>
+                <p>Bridge Release</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

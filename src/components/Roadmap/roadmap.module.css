@@ -21,9 +21,14 @@
 }
 
 .roadmap__wrapper {
+  @apply hidden lg:block;
   position: relative;
   margin: 0 auto;
   /* height: 500px; */
+}
+
+.mobile__roadmap {
+  @apply block lg:hidden;
 }
 
 .roadmap__wrapper::after {
@@ -40,7 +45,7 @@
 }
 
 .roadmap__item_container {
-  @apply flex gap-32 justify-center pt-20;
+  @apply flex flex-col gap-4 items-center md:flex-row md:items-stretch lg:gap-32 justify-center px-4 lg:pt-20;
 }
 
 .roadmap__item {
@@ -68,27 +73,52 @@
   @apply font-poppins text-[17px] text-[#A09FAF];
 }
 
-.roadmap__item::before{
-    content: "";
-    position: absolute;
-    border: 2px white dashed;
-    width: 70px;
-    top:-40px;
-    left: 36%;
-    transform: rotate(90deg);
+.roadmap__item::before {
+  content: "";
+  position: absolute;
+  border: 2px white dashed;
+  width: 70px;
+  top: -40px;
+  left: 36%;
+  transform: rotate(90deg);
 }
 
 .roadmap__item::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 44%;
-    background-color: #C004DE;
-    border: 5px solid rgba(192, 4, 222, 0.2);
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-    top: -93px;
-    border-radius: 50%;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 44%;
+  background-color: #c004de;
+  border: 5px solid rgba(192, 4, 222, 0.2);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  top: -93px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.roadmap__item_mobile {
+  @apply p-4 w-[300px];
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2) -1.52%,
+    rgba(255, 255, 255, 0.2) 104.35%
+  );
+  backdrop-filter: blur(60px);
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    145.77deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.3) 105.76%
+  );
+}
+
+.roadmap__item_mobile h4 {
+  @apply font-alien_encounters_solid text-[24px];
+}
+
+.roadmap__item_mobile p {
+  @apply font-poppins text-[17px] text-[#A09FAF];
 }
