@@ -16,7 +16,7 @@
 }
 
 .hero_ellipse{
-    @apply hidden lg:block absolute ;
+    @apply hidden md:block absolute ;
     right: 550px;
     bottom: -100px;
     border-radius: 200px;

@@ -17,7 +17,7 @@ export default function About() {
             it is permissionless, meaning anyone can create a new account or
             transaction on the network.
           </p>
-          <a href="/" className="flex gap-4 items-center">
+          <a href="/" className="flex gap-4 items-center justify-center md:justify-start">
             <p>Buy Token</p>
             <img src="/images/elements/btn.svg" alt="" />
           </a>
