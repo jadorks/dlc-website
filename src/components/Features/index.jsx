@@ -1,7 +1,56 @@
 import Link from "next/link";
 import styles from "./features.module.css";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
 export default function Features() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const textVariant = {
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.3, ease: "easeIn" },
+    }),
+    hidden: { opacity: 0, y: -2 },
+  };
+
+  const headingVariant = {
+    visible: {
+      opacity: 1,
+      transition: { delay: 0.3, ease: "easeIn" },
+    },
+    hidden: { opacity: 0 },
+  };
+
+  const imageVariant = {
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.3, ease: "easeIn" },
+    }),
+    hidden: { opacity: 0, y: 30 },
+  };
+
+  const linkVariant = {
+    visible: {
+      opacity: 1,
+      transition: { delay: 0.6, ease: "easeIn" },
+    },
+    hidden: { opacity: 0 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   const features = [
     {
       image: "/images/features/feature1.png",
@@ -33,22 +82,53 @@ export default function Features() {
     },
   ];
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.content}>
-        <h2>Explore our Features</h2>
+        <motion.h2 variants={headingVariant} initial="hidden" animate={control}>
+          Explore our Features
+        </motion.h2>
         <div className={styles.features}>
           {features.map((item, index) => (
             <div className={styles.features__card} key={index}>
-              <img src={item.image} className={item.className} alt="" />
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <motion.img
+                custom={index}
+                variants={imageVariant}
+                initial="hidden"
+                animate={control}
+                src={item.image}
+                className={item.className}
+                alt=""
+              />
+              <motion.h3
+                custom={index}
+                variants={textVariant}
+                initial="hidden"
+                animate={control}
+              >
+                {item.title}
+              </motion.h3>
+              <motion.p
+                custom={index}
+                variants={textVariant}
+                initial="hidden"
+                animate={control}
+              >
+                {item.description}
+              </motion.p>
             </div>
           ))}
         </div>
-        <Link href="/whitepaper#features" className="mt-10 flex justify-center gap-4 items-center">
+        <Link href="/whitepaper#features">
+          <motion.div
+            variants={linkVariant}
+            initial="hidden"
+            animate={control}
+            className="mt-10 flex justify-center gap-4 items-center"
+          >
             <p className="font-poppins text-16">Endless possibilities</p>
             <img src="/images/elements/btn-alt.svg" alt="" />
-          </Link>
+          </motion.div>
+        </Link>
       </div>
     </div>
   );

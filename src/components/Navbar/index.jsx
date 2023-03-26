@@ -4,29 +4,77 @@ import { Popover } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import { useRouter } from "next/router";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
 export default function Navbar() {
   const router = useRouter();
+
+  const logoVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+    hidden: { opacity: 0, scale: 0 },
+  };
+
+  const linkVariant = {
+    visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1 } }),
+    hidden: { opacity: 0, y: 20 },
+  };
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.content}>
         <div className={styles.content__left}>
           <Link href={"/"}>
-            <img className="w-32" src="/images/dlc-logo.svg" alt="dlc-logo" />
+            <motion.img
+              className="w-32"
+              src="/images/dlc-logo.svg"
+              alt="dlc-logo"
+              variants={logoVariant}
+              initial="hidden"
+              animate={control}
+            />
           </Link>
         </div>
         <div className={styles.content__right}>
           <ul className={styles.nav_menu}>
             {router.pathname === "/" ? (
-              <li>
+              <motion.li
+                custom={0}
+                variants={linkVariant}
+                initial="hidden"
+                animate={control}
+              >
                 <Link href={"/whitepaper"}>Whitepaper</Link>
-              </li>
+              </motion.li>
             ) : (
-              <li>
+              <motion.li
+                custom={0}
+                variants={linkVariant}
+                initial="hidden"
+                animate={control}
+              >
                 <Link href={"/"}>Home</Link>
-              </li>
+              </motion.li>
             )}
 
-            <li>
+            <motion.li
+              custom={1}
+              variants={linkVariant}
+              initial="hidden"
+              animate={control}
+            >
               <a
                 href="https://www.dextools.io/app/en/ether/pair-explorer/0x64b89fc798ed63e1df644505560956722cd610cb"
                 target="_blank"
@@ -34,8 +82,13 @@ export default function Navbar() {
               >
                 Chart
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              custom={2}
+              variants={linkVariant}
+              initial="hidden"
+              animate={control}
+            >
               <a
                 href="https://app.uniswap.org/#/swap?outputCurrency=0x056d97a9a9dda5a32492ac31467a3823f26f29f0"
                 target="_blank"
@@ -43,7 +96,7 @@ export default function Navbar() {
               >
                 Buy
               </a>
-            </li>
+            </motion.li>
           </ul>
         </div>
         <Popover className={styles.mobile__menu}>
