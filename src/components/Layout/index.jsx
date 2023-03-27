@@ -57,9 +57,11 @@ export default function Layout({ children }) {
         autoPlay
         muted
         loop
+        preload="auto"
         poster="/poster.jpg"
         className={styles.bgVid}
       >
+        <source src="/page_bg.mp4" type="video/mp4" />
         <source src="/page_bg.webm" type="video/webm" />
       </video>
       <div className={styles.wrapper}>
