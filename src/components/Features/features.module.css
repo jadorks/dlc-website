@@ -1,5 +1,6 @@
 .container {
   @apply bg-[#F5F5F5] text-black py-32 px-16;
+  scroll-snap-align: start;
 }
 
 .content h2 {

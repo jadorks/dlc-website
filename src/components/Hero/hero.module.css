@@ -1,5 +1,9 @@
+.section {
+    scroll-snap-align: start;
+}
+
 .container {
-    @apply py-16 px-4;
+    @apply flex justify-center items-center py-16 px-4;
 }
 
 .content{

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Accordion from "@/components/Accordion";
 import Hero from "@/components/Hero";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 export default function Whitepaper() {
   const features = [
@@ -207,6 +208,7 @@ export default function Whitepaper() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

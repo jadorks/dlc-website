@@ -53,8 +53,8 @@ export default function About() {
   }, [control, inView]);
 
   return (
-    <div ref={ref} className={styles.container}>
-      <div className={styles.content}>
+    <div className={styles.container}>
+      <div ref={ref} className={styles.content}>
         <motion.div
           custom={1}
           variants={imageVariant}
