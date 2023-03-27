@@ -28,12 +28,3 @@
     @apply hidden xl:block absolute bottom-[6rem] right-0;
 
 }
-
-.about_ellipse{
-    @apply hidden md:block absolute;
-    bottom: 200px;
-    left: 100px;
-    border-radius: 200px;
-    filter: blur(200px);
-    z-index: -1;
-}

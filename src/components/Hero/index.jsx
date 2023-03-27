@@ -39,11 +39,6 @@ export default function Hero() {
               A voice-automated, proof-of-authority,
               <br /> permisionless blockchain
             </motion.h2>
-            <img
-              className={styles.hero_ellipse}
-              src="/images/elements/hero-ellipse.svg"
-              alt=""
-            />
           </div>
         </div>
       </div>

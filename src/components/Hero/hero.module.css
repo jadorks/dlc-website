@@ -16,14 +16,5 @@
 }
 
 .subtitle {
-    @apply relative font-alien_encounters_solid text-[25px] md:text-[30px] font-bold;
-}
-
-.hero_ellipse{
-    @apply hidden md:block absolute ;
-    right: 550px;
-    bottom: -100px;
-    border-radius: 200px;
-    filter: blur(200px);
-    z-index: -1;
+    @apply font-alien_encounters_solid text-[25px] md:text-[30px] font-bold;
 }

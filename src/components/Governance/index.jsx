@@ -62,11 +62,6 @@ export default function Governance() {
           animate={control}
           className={styles.content__right}
         >
-          <img
-            className={styles.about_ellipse}
-            src="/images/elements/governance-ellipse.svg"
-            alt=""
-          />
           <motion.h2 variants={textVariant}>
             A Governance Token for Community-Driven Decision Making
           </motion.h2>

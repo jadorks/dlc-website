@@ -23,12 +23,3 @@
 .about_end {
     @apply hidden xl:block absolute bottom-0 left-0;
 }
-
-.about_ellipse{
-    @apply hidden md:block absolute;
-    bottom: 200px;
-    left: 100px;
-    border-radius: 200px;
-    filter: blur(200px);
-    z-index: -1;
-}

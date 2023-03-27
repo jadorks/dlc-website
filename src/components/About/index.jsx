@@ -70,11 +70,6 @@ export default function About() {
           animate={control}
           className={styles.content__right}
         >
-          <img
-            className={styles.about_ellipse}
-            src="/images/elements/about-ellipse.svg"
-            alt=""
-          />
           <motion.h2 variants={textVariant}>
             What is Deep Learning Chain?
           </motion.h2>
