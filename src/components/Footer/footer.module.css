@@ -1,6 +1,8 @@
 .container {
     @apply px-4 sm:px-16 py-8 bg-[#0B0C1B];
     @apply border-t-[1.5px] border-[#FFFFFF3D];
+    scroll-snap-align: end;
+
 }
 
 .content {

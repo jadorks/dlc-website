@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 import Governance from "@/components/Governance";
 import Hero from "@/components/Hero";
 import Roadmap from "@/components/Roadmap";
@@ -13,6 +14,7 @@ export default function Home() {
       <Governance />
       <Features />
       <Roadmap />
+      <Footer/>
     </div>
   );
 }

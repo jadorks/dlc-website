@@ -124,7 +124,6 @@ export default function Roadmap() {
           </motion.div>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }
