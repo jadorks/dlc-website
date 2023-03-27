@@ -45,8 +45,8 @@ export default function Roadmap() {
   }, [control, inView]);
 
   return (
-    <div ref={ref} className={styles.section}>
-      <div className={styles.container}>
+
+      <div ref={ref} className={styles.container}>
         <div className={styles.content}>
           <div className={styles.content__head}>
             <h3>Milestones</h3>
@@ -124,6 +124,5 @@ export default function Roadmap() {
           </motion.div>
         </div>
       </div>
-    </div>
   );
 }

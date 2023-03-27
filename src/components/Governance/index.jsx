@@ -54,7 +54,7 @@ export default function Governance() {
   }, [control, inView]);
 
   return (
-    <div  className={styles.container}>
+    <div className={styles.container}>
       <div ref={ref} className={styles.content}>
         <motion.div
           variants={container}

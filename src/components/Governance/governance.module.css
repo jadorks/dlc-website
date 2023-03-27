@@ -1,6 +1,5 @@
 .container{
     @apply flex flex-col justify-center relative pt-16 lg:pt-0 pb-16 px-8 min-h-screen;
-    scroll-snap-align: start;
 }
 
 .content{
