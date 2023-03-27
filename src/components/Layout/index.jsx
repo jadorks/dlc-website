@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useEffect, useState, useRef } from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import styles from "./layout.module.css";
@@ -51,9 +52,21 @@ export default function Layout({ children }) {
         <meta content="summary_large_image" name="twitter:card" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
+      <video
+        playsInline
+        autoPlay
+        muted
+        loop
+        poster="/poster.jpg"
+        className={styles.bgVid}
+      >
+        <source src="/page_bg.webm" type="video/webm" />
+      </video>
+      <div className={styles.wrapper}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </div>
     </>
   );
 }
