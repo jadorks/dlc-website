@@ -62,7 +62,7 @@ export default function About() {
           animate={control}
           className={styles.content__left}
         >
-          <img src="/images/about.png" alt="" />
+          <img src="/images/dlc.png" alt="" />
         </motion.div>
         <motion.div
           variants={container}
